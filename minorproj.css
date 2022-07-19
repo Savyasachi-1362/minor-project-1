@@ -1,0 +1,212 @@
+* {
+    box-sizing: border border-box;
+}
+html{
+    overflow: scroll;
+}
+body
+{
+    background-attachment: fixed;
+    background-image: linear-gradient(to right bottom,orange,white,white,green);
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+   
+}
+
+
+.navbar {
+    display: flex;
+    position: fixed;
+   
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: 100vw;
+    min-height: 4em;
+}
+
+
+.navlinks >li:hover{
+    color: #333;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 2em;
+}
+
+.logo
+{
+    height: 5em;
+    width: 10em;
+    position: relative;
+    left: 7em;
+    bottom: 0.4em;
+}
+
+.navlinks{
+        
+    display:flex;    
+    width:100%;
+    list-style: none;
+    justify-content: flex-end;
+    color:white;
+    right: 3em;
+    position: relative;
+   gap:2em;
+   align-content: center;
+   cursor:pointer;
+    }
+
+    .touristplaces
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       top:8em;
+        width: 90vw;
+        position: relative;
+      grid-column-gap: 2em;
+      grid-row-gap: 2em;
+      
+ left:5%;
+    
+    }
+
+    .imgcontainer img{
+        width:90%;
+        height:300px;
+        align-items: center;
+        transition: 0.3s;
+        
+    }
+
+    .heading{
+        grid-column: 1/4;
+        text-align: center;
+        border: solid black 2px;
+    }
+.placedesc{
+    position: relative;
+    font-size: 2em;
+    color: black;
+    width:80%;
+    height:40%;
+    left:3%;
+    top:-60%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: white 2px solid;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity:0%;
+    transition: 0.3s;
+    cursor:pointer;
+}
+.imgcontainer:hover .placedesc
+{
+    opacity: 1;
+}
+
+.imgcontainer:hover .image
+{
+    opacity: 0.5;
+    height: 350px;
+    width: 95%;
+}
+    @media (max-width: 900px) {
+        .navbar {
+         
+            align-items: center;
+            justify-items: start;
+            height: minmax (4em,auto);
+        }
+    
+        
+    
+        .navlinks li {
+            
+            width: 100%;
+            text-align: center;
+            margin-top: 2px;
+            position: relative;
+            
+         
+          
+        }
+        .navlinks li:hover
+        {
+            font-weight: bold;
+            text-decoration: underline;
+            background-color: transparent;
+            color: white;
+        }
+    
+        .navlinks{
+            position: absolute;
+            flex-direction: row;
+           
+           gap: 1em;
+           left:-2.1em;
+           align-items: center;
+          
+    
+        }
+    
+        .logo
+        {
+            display: none;
+        }
+    
+        .touristplaces
+        {
+            grid-template-columns: 1fr;
+            width: 70vw;
+            left: 15%;
+            
+        }
+
+        .heading
+        {
+            grid-column: 1/2;
+        }
+    
+    }
+
+    .footer{
+grid-template-columns: 1fr 1fr;
+        width:100vw;
+color: white;
+        left:0%;
+        background-color: black;
+       bottom: 0vh;
+        position: fixed;
+        text-align: center;
+        display: grid;
+    }
+   
+   #N
+   {
+    display: grid;
+   }
+
+   #S
+   {
+    display: none;
+   }
+
+   #E
+   {
+    display: none;
+   }
+
+   #W
+   {
+    display: none;
+   }
+
+   a{
+    color: white;
+    text-decoration: none;
+   }
